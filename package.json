@@ -1,0 +1,33 @@
+{
+  "name": "messenger-electron",
+  "version": "1.0.0",
+  "description": "Messenger as an Electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^26.6.10",
+    "electron-builder": "^24.0.0",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.electrondev5149.messengerclient",
+    "productName": "Messenger_Electron",
+    "files": [
+      "main.js",
+      "package.json",
+      "icons/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Utility",
+      "icon": "icons/512/icon.png"
+    }
+  },
+  "author": "Joaquin Angeles",
+  "license": "MIT"
+}
